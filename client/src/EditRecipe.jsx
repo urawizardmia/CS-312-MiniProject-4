@@ -26,7 +26,7 @@ function EditRecipe(props) {
         // usea the recipe number so the server knows which one to change
         fetch("http://localhost:3000/api/recipes/" +  props.number, {
             method: "PUT",
-            credentials: "include",
+            credentials:  "include",
             headers: {
                 "Content-Type": "application/json",
             },
@@ -43,7 +43,7 @@ function EditRecipe(props) {
             })
             .catch((error) => {
                 console.log("Error editing  recipe:", error);
-                setMessage("Couldn't save your changes. Try again!");
+                setMessage("Couldn't save your changes.  Try again!");
             });
     }
 
@@ -60,7 +60,7 @@ function EditRecipe(props) {
                     required
                 />
 
-                <label htmlFor="editTime">Cook Time</label>
+                <label htmlFor="editTime"> Cook Time</label>
                 <input
                     id="editTime"
                     type="text"
@@ -85,7 +85,7 @@ function EditRecipe(props) {
                     <option value="dinner">Dinner</option>
                     <option value="snack">Snack</option>
                     <option value="dessert">Dessert</option>
-                    <option value="drinks">Drinks</option>
+                     <option value="drinks">Drinks</option>
                 </select>
 
                 <label htmlFor="editIngredients">Ingredients</label>

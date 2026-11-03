@@ -38,7 +38,10 @@ function Signin(props) {
                 if (result.success) {
                     // 
                     props.onLogin();
-                } else { setMessage(result.message);
+                } 
+                else 
+                { 
+                    setMessage(result.message);
                 }
             })
             .catch((error) => {

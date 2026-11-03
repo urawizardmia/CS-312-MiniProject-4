@@ -61,7 +61,9 @@ function PostList(props) {
                     setRecipeList(remainingRecipes);
                     setEditing(null );
                     setMessage("Recipe deleted!");
-                } else { setMessage(data.message);
+                } 
+                else 
+                { setMessage(data.message);
                 }
             })
             .catch((error) => {
@@ -124,7 +126,7 @@ function PostList(props) {
                         </div>
                         <h3>Ingredients:</h3>
                         <ul>
-                            {recipe.ingredients.split("\n").map((item, index) => (
+                            {recipe.ingredients.split("\n").map(( item, index) => (
                                 <li key={index}>{item}</li>
                             ))}
                         </ul>
@@ -138,7 +140,7 @@ function PostList(props) {
 
                         {recipe.addedBy  === userId && (
                             <div className="recipe-buttons">
-                                <button type="button" onClick={() => setEditing(num)}>
+                                <button type="button" onClick={() =>  setEditing(num)}>
                                     Edit
                                 </button>
                                 <button type="button" onClick={() => removeRecipe(num)}>

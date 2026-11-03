@@ -20,7 +20,7 @@ app.use(express.json());
 
 app.use(
     session({
-        secret: process.env.SESSION_SECRET,
+        secret: "whatcha-cookin-cs312-class-project-secret",
         resave: false,
         saveUninitialized: false,
     })

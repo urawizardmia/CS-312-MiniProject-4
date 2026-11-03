@@ -13,7 +13,9 @@ function MyProfile() {
             .then((data) => {
                 if (data.message) {
                     setMessage(data.message);
-                } else {
+                } 
+                else 
+                {
                     // saves the profile info to display later
                     setMyInfo(data);
                     setMessage("");

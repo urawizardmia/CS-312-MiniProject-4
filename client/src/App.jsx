@@ -32,7 +32,9 @@ function App() {
                     // recipe list gets loaded again
                     setRefresh(!refresh);
                     setMessage("You have been logged out!");
-                } else {
+                } 
+                else 
+                {
                     setMessage(data.message);
                 }
             })
