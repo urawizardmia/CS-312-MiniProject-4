@@ -9,7 +9,7 @@ import MyProfile  from "./MyProfile";
 function App() {
     // keepa track of what page the person is looking at
     const [currentPage, setCurrentPage] = useState("home");
-    const [ refresh, setRefresh] = useState(false);
+    const  [ refresh, setRefresh] = useState(false);
     const [message, setMessage] = useState("");
 
     // when the user signs in, go back to the home page
@@ -47,7 +47,7 @@ function App() {
             <nav>
                 <button onClick={()  =>setCurrentPage("home")}>Home</button>
                 <button onClick={() => setCurrentPage("signup")}>Sign Up</button>
-                <button onClick={()  => setCurrentPage("signin")}>Sign In</button>
+                <button onClick={() => setCurrentPage("signin")}>Sign In</button>
                 <button onClick={() => setCurrentPage("profile")}>My Profile</button>
                 <button onClick={handleLogout}>Log Out</button>
             </nav>
@@ -63,7 +63,7 @@ function App() {
             {currentPage === "signup" && <Signup />}
             {currentPage === "signin" && <Signin onLogin={handleLogin} />}
 
-            {currentPage === "profile" && <MyProfile />}
+            {currentPage ===  "profile" && <MyProfile />}
         </div>
     );
 }

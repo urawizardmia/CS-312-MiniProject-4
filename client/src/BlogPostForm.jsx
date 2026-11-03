@@ -13,7 +13,6 @@ function BlogPostForm(props) {
     function postRecipe(event)  {
         // stops the page from refereshing
         event.preventDefault();
-
         // put everything from the form into one recipe
         const recipeInfo = {
             recipeName: recipeName,
@@ -21,7 +20,7 @@ function BlogPostForm(props) {
             servings: servings,
             category:  category,
             ingredients: ingredients,
-            steps: steps,
+            steps:steps,
         };
         // sends the new recipe to the server
         fetch("http://localhost:3000/api/recipes", {
@@ -68,7 +67,7 @@ function BlogPostForm(props) {
                     required
                 />
 
-                <label htmlFor="cookTime">Cook Time</label>
+                <label htmlFor="cookTime ">Cook Time</label>
                 <input
                     type="text"
                     id="cookTime"
@@ -105,7 +104,7 @@ function BlogPostForm(props) {
                 />
                 <label htmlFor="steps">Steps</label>
                 <textarea id="steps" value={steps} onChange={(event) => setSteps(event.target.value)} required />
-                <input type="submit" value="Post Recipe!" />
+                <input type="submit"  value="Post Recipe!" />
                 <p>{message}</p>
             </form>
         </div>

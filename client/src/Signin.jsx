@@ -33,7 +33,7 @@ function Signin(props) {
             },
             body: JSON.stringify(loginInfo),
         })
-            .then((response) => response.json())
+            .then((response)=> response.json())
             .then((result) => {
                 if (result.success) {
                     // 
