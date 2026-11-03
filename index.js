@@ -42,7 +42,6 @@ app.post("/api/recipes",  (req, res) => {
         return res.status(401).json({ message: "Couldn't find your account, try again." });
     }
 
-    // gets the recipe info that  was sent from the form
     const newRecipe = {
         recipeName: req.body.recipeName,
         author: person.name,
@@ -84,7 +83,6 @@ app.put("/api/recipes/:recipeNum", (req,  res) => {
         return res.status(400).json({ message: "You forgot necessary recipe information!" });
     }
 
-    // changes the  old recipe info to whatever its edited to
     recipe.recipeName = req.body.recipeName;
     recipe.cookTime = req.body.cookTime;
     recipe.servings = req.body.servings;
@@ -112,7 +110,6 @@ app.delete("/api/recipes/:recipeNum", (req,res) => {
         return res.status(403).json({ message: "You can only delete your own recipe!" });
     }
 
-    // removes the recipe from the recipes array
     recipes.splice(recipeNum, 1);
 
     res.json({ message:"Recipe deleted!", success: true });

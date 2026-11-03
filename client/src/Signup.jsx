@@ -10,13 +10,11 @@ function Signup() {
     function makeAccount(event) {
         event.preventDefault();
 
-        // put the inputs together to send to the server
         const newUser = {
             userId:  userId,
             password: password,
             name: name,
         };
-        // checks if the user ID is already being used
         fetch("http://localhost:3000/api/signup", {
             method: "POST",
             headers: {

@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 function BlogPostForm(props) {
-    // recipe information that gets filled out
     const [recipeName, setRecipeName] = useState("");
     const [cookTime, setCookTime] = useState("");
     const [servings, setServings] = useState("");
@@ -22,7 +21,6 @@ function BlogPostForm(props) {
             ingredients: ingredients,
             steps:steps,
         };
-        // sends the new recipe to the server
         fetch("http://localhost:3000/api/recipes", {
             method: "POST",
             credentials: "include",

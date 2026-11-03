@@ -7,7 +7,6 @@ import PostList from "./PostList";
 import MyProfile  from "./MyProfile";
 
 function App() {
-    // keepa track of what page the person is looking at
     const [currentPage, setCurrentPage] = useState("home");
     const  [ refresh, setRefresh] = useState(false);
     const [message, setMessage] = useState("");
@@ -19,7 +18,6 @@ function App() {
     }
 
     function handleLogout() {
-        // logs user out
         fetch( "http://localhost:3000/api/logout", {
             method: "POST",
             credentials: "include",

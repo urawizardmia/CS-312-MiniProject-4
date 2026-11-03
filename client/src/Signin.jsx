@@ -24,7 +24,6 @@ function Signin(props) {
         event.preventDefault();
 
         setMessage("");
-        // checks the login with the backend
         fetch("http://localhost:3000/api/signin", {
             method: "POST",
             credentials: "include",

@@ -13,7 +13,6 @@ function EditRecipe(props) {
     function handleSave(event) {
         event.preventDefault();
 
-        // gets all the changed info together to send it back
         const updatedRecipe = {
             recipeName: recipeName,
             cookTime: cookTime,
@@ -82,11 +81,10 @@ function EditRecipe(props) {
                 <select id="editCategory" value={category} onChange={(event) => setCategory(event.target.value)}>
                     <option value="breakfast">Breakfast</option>
                     <option value="lunch">Lunch</option>
-                    <option value="dinner">Dinner</option>
+                    <option value= "dinner">Dinner</option>
                     <option value="snack">Snack</option>
                     <option value="dessert">Dessert</option>
-                     <option value="drinks">Drinks</option>
-                </select>
+                    <option value="drinks">Drinks</option>                </select>
 
                 <label htmlFor="editIngredients">Ingredients</label>
                 <textarea

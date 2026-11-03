@@ -16,7 +16,6 @@ function MyProfile() {
                 } 
                 else 
                 {
-                    // saves the profile info to display later
                     setMyInfo(data);
                     setMessage("");
                 }

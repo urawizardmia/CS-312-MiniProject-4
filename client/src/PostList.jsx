@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import EditRecipe from "./EditRecipe";
 
 function PostList(props) {
-    // keeps all recipes from the server here
     const [recipeList,setRecipeList] = useState([]);
     const [userId, setUserId] = useState(null);
     const [editing, setEditing] = useState(null);
@@ -10,7 +9,6 @@ function PostList(props) {
     const [message, setMessage] = useState("");
 
     useEffect(() => {
-        // gets all the recipes to show on the home  page
         fetch("http://localhost:3000/api/recipes")
             .then((response) => response.json())
             .then((data) => {
@@ -54,12 +52,10 @@ function PostList(props) {
             .then((response) => response.json())
             .then((data)  => {
                 if (data.success) {
-                    // takes that recipe out of the list so it disappears
                     const remainingRecipes = recipeList.filter((recipe, index) => {
                         return index !== recipeNum;
                     });
                     setRecipeList(remainingRecipes);
-                    setEditing(null );
                     setMessage("Recipe deleted!");
                 } 
                 else 
