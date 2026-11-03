@@ -1,0 +1,154 @@
+
+body {
+    background-color: #efe3ff;
+    color: #6c4a94;
+    font-family: "Poppins", sans-serif;
+    margin: 5px;
+    padding: 10px 20px 20px 30px;
+}
+
+h1 {
+    font-family: "Shizuru", system-ui;
+    color: #c92f4f;
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 35px;
+  margin-bottom: 10px;
+  color: #c92f4f;
+}
+
+h3 {
+  color: #6c4a94;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+label {
+    color: #c92f4f;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+input, textarea, select {
+    font-family: "Poppins", sans-serif;
+    border: 5px solid #b79ad9;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+button, input[type="submit"] {
+    background-color: #c92f4f;
+    color: white;
+    border: 3px solid #6c4a94;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 #65d6d0;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    padding: 10px 18px;
+    width: auto;
+    cursor: pointer;
+}
+
+.recipe-form, .edit-form {
+    background-color: white;
+    padding: 25px;
+    box-shadow: 5px 5px 0 #65d6d0;
+    border: 5px solid #c92f4f;
+    border-radius: 10px;
+}
+
+.filter-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter-form select {
+    width: 250px;
+}
+
+.recipe-card {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    border: 5px solid #c92f4f;
+    box-shadow: 5px 5px 0 #65d6d0;
+}
+
+.recipe-title {
+    color: #c92f4f;
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+}
+
+.recipe-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipe-details {
+    display: flex;
+    gap: 30px;
+}
+
+.recipe-details p {
+    text-transform: capitalize;
+}
+
+.recipe-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .recipe-form, .edit-form, .recipe-card {
+        padding: 15px;
+    }
+
+    .filter-form select {
+        width: 100%;
+    }
+
+    .recipe-info, .recipe-details {
+        display: block;
+    }
+
+    .recipe-buttons {
+        flex-wrap: wrap;
+    }
+}
