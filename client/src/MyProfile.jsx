@@ -50,7 +50,7 @@ function MyProfile() {
 
             {myInfo.recipes.length === 0 && <p>You haven't shared any recipes yet!</p>}
 
-            {myInfo.recipes.map((recipe, num) => (
+            {myInfo.recipes.map((recipe, num) =>(
                 <div className="recipe-card" key={num}>
                     <h2 className="recipe-title">{recipe.recipeName}</h2>
 
@@ -60,7 +60,7 @@ function MyProfile() {
                     </div>
 
                     <div className="recipe-details">
-                        <p>Category:{recipe.category}</p>
+                        <p>Category: {recipe.category}</p>
                         <p>Cook Time: {recipe.cookTime}</p>
                         <p>Servings: {recipe.servings}</p>
                     </div>

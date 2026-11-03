@@ -88,10 +88,10 @@ function PostList(props) {
 
             <p>{message}</p>
 
-            {recipeList.length === 0 && <p>No recipes have been shared yet!</p>}
+            {recipeList.length === 0&& <p>No recipes have been shared yet!</p>}
             {recipeList.map((recipe, num) => {
                 // skips recipes that arent in the category picked
-                if (category !== "all" && recipe.category !== category) {
+                if (category !==  "all" && recipe.category !== category) {
                     return null;
                 }
                 if (editing === num) {
@@ -111,12 +111,12 @@ function PostList(props) {
                         <h2 className="recipe-title">{recipe.recipeName}</h2>
 
                         <div className="recipe-info">
-                            <p>By:{recipe.author}</p>
+                            <p>By: {recipe.author}</p>
                             <p>{new Date(recipe.date).toDateString()}</p>
                         </div>
 
                         <div className="recipe-details">
-                            <p>Category:{recipe.category}</p>
+                            <p>Category: {recipe.category}</p>
                             <p>Cook Time: {recipe.cookTime}</p>
                             <p>Servings: {recipe.servings}</p>
                         </div>
